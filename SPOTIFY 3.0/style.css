@@ -1,0 +1,582 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body{
+    overflow: hidden;
+}
+body{
+    color: white; 
+    background-color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.bodyStructure{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    width: calc(100% - 22px);
+    height: 10vh;
+}
+#logo{
+    height: 2.5rem;
+}
+#home{
+    height: 2.7rem;
+    padding: 4px;
+    border-radius: 50%;
+    background-color: rgb(225, 225, 225);
+}
+.nav-logos{
+    gap: 20px;
+    width: 10%;
+}
+.searches{
+    display: flex;
+    align-items: center;
+    background-color: rgb(36, 36, 36);
+    border-radius: 1.5rem;
+    font-size: 2.5rem;
+    padding: 5px;
+    justify-content: space-around;
+    width: 35%;
+}
+
+.searches input{
+    padding: 8px;
+    font-size: 1.4rem;
+    outline: none;
+    border-block-style: none;
+    border-right-style: none;
+    color: white;
+    background-color: rgb(36, 36, 36);
+}
+#search{
+    height: 2rem;
+}
+#browse{
+    height: 1.8rem;
+}
+#line , .line{
+    font-size: 1.5rem;
+    font-weight: 200;
+}
+#install{
+    height: 1.1rem;
+}
+
+.centerofnav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    gap: 1.2rem;
+}
+.centerofnav > *{
+    text-decoration: none;
+    color: darkgray;
+    font-weight: 650;
+    font-size: large;
+}
+.afternav{
+    width: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: darkgray;
+    font-weight: 650;
+    font-size: 1.1rem;
+}
+
+.rightbtns{
+    width: 16%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.btn2{
+    padding: 10px 24px;
+    background-color: #fff;
+    color: black;
+    font-size: large;
+    font-weight: 650;
+    border-radius: 24px;
+    gap: .7rem;
+}
+.btn1{
+    font-weight: 650;
+    font-size: large;
+    color: darkgray;
+}
+
+
+.myp:hover,
+.centerofnav > a > p:hover{
+    cursor: pointer;
+    color: white;
+}
+.btn1:hover{
+    cursor: pointer;
+    color: white;
+    transform: scale(1.2);
+}
+.btn2:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* navbar ends here */
+.container{
+    width: 100%;
+    height: 77vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; 
+}
+aside{
+    width: 29%;
+    background-color:#111111;
+    border-radius: 16px;
+    min-height: 95%;
+    margin-left: .5rem;
+    
+}
+main{
+    width: 74%;
+    min-height: 95%;
+    background-color: #111111;
+    border-radius: 16px;
+    /* overflow: scroll; */
+}
+
+/* sidebar starts here */
+
+.library {
+    margin: 12px;
+    background-color: #111111;
+}
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    padding: 5px 5px;
+}
+i{
+    font-size: 2rem;
+    cursor: pointer;
+}
+.centerofsidebar {
+    height: 30vh;
+    overflow: auto;
+    background-color: #111111;
+    /* scrollbar-width: none; */
+}
+
+.centerofsidebarbox1 {
+    border-radius: 7px;
+    margin-top: 20px;
+    padding: 23px 13px;
+    padding-left: 12px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(28, 28, 28);
+    flex-direction: column;
+}
+.centerofsidebarbox1 h4 {
+    background-color: white;
+    color: black;
+    padding: 8px 0;
+    margin-top: 16px;
+    width: 139px;
+    border-radius: 41px;
+    cursor: pointer;
+}
+.centerofsidebarbox1 h4:hover {
+    transform: scale(1.05);
+}
+
+.centerofsidebarbox1 p {
+    font-size: small;
+    margin-top: 5px;
+    color: lightgray;
+}
+
+/* box2 */
+.centerofsidebarbox2 {
+border-radius: 7px;
+margin-top: 20px;
+    padding: 23px 13px;
+    padding-left: 12px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(28, 28, 28);
+    flex-direction: column;
+}
+.centerofsidebarbox2 h4 {
+    background-color: white;
+    color: black;
+    padding: 8px 0;
+    margin-top: 16px;
+    width: 139px;
+    border-radius: 41px;
+    cursor: pointer;
+    
+}
+.centerofsidebarbox2 h4:hover {
+    transform: scale(1.05);
+}
+
+.centerofsidebarbox2 p {
+    font-size: small;
+    margin-top: 5px;
+    color: lightgray;
+}
+
+
+
+/*  gpt code */
+.footer {
+    /* position: absolute; */
+    /* bottom: 0; */
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.9rem;
+    padding: 0.6rem;
+    background-color: #111111;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #666;
+    border-bottom-right-radius: 9px;
+}
+
+.legal-links,
+.cookie-policy,
+.language-selection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+}
+
+.legal-links a,
+.cookie-policy a {
+    color: darkgray;
+    text-decoration: none;
+    transition: color 0.2s ease;
+    font-size: 14px;
+}
+
+.legal-links a:hover,
+.cookie-policy a:hover {
+    color: #1db954;
+    /* Spotify green */
+}
+
+.language-selection button {
+    background: none;
+    border: 1px solid #ffffff;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    color: #ffffff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.language-selection button:hover {
+    transform: scale(1.05);
+}
+
+.language-selection svg {
+    width: 14px;
+    height: 16px;
+    fill: #ffffff;
+}
+
+
+/* right main section */
+.spotifyplaylist{
+    padding: 16px;
+}
+.trendingsong{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.seemore{
+    color: darkgray;
+    cursor: pointer;
+}
+.seemore:hover{
+    color: white;
+    text-decoration: underline;
+}
+.trendingsong h2{
+    margin-left: 8px;
+    margin-top: 4px;
+}
+.cardcontainer{
+    display: flex;
+    align-items: center;
+    /* margin-top: 2rem; */
+    gap: 10px;
+    min-height: 200px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    /* flex-wrap: wrap; */
+}
+.card{
+    border: 2px;
+    border-radius: 5px;
+    width: 170px;
+    margin-top: 10px;
+    padding: 8px;
+    position: relative;
+    flex-shrink: 0;
+    
+}
+.card:hover{
+    background-color: rgb(48, 48, 48);
+    /* transform: scale(1.05); */
+    cursor: pointer;
+}
+.pic{
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.playbtn{
+    height: 57px;
+    width: 50px;
+    position: absolute;
+    top: 147px;
+    right: 11px;
+    opacity: 0;
+    z-index: 10;
+    transition: all 0.4s ease, opacity 0.4s ease; 
+}
+
+.visible{
+    opacity: 1;
+    top: 110px;
+}
+.card >* {
+    padding-top: 7px;
+}
+.card p{
+    font-size: small;
+    color: lightgray;
+}
+
+
+.creatorsection{
+    padding: 16px;
+}
+.creatorheading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.creatorheading h2{
+    margin-left: 8px;
+    margin-top: 4px;
+}
+.seemoretwo{
+    color: darkgray;
+    cursor: pointer;
+}
+.seemoretwo:hover{
+    color: white;
+    text-decoration: underline;
+}
+.creatorscontainer{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 200px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+.creatorcard{
+    border: 2px;
+    border-radius: 5px;
+    width: 190px;
+    margin-top: 10px;
+    padding: 8px;
+    position: relative;
+    flex-shrink: 0;
+}
+.piccreator{
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* border: 2px solid yellow; */
+}
+.creatorcard >* {
+    padding-top: 7px;
+}
+.creatorcard p{
+    font-size: small;
+    color: lightgray;
+}
+.creatorcard:hover{
+    background-color: rgb(48, 48, 48);
+    cursor: pointer;
+}
+
+/* radiosectionstation */
+
+.Radiostation{
+    padding: 16px;
+    margin-bottom: 5rem;
+}
+.radiosong{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.seemorethree{
+    color: darkgray;
+    cursor: pointer;
+}
+.seemorethree:hover{
+    color: white;
+    text-decoration: underline;
+}
+.radiocontainer{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 200px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+.radiocard{
+    border: 2px;
+    border-radius: 5px;
+    width: 190px;
+    margin-top: 10px;
+    padding: 8px;
+    position: relative;
+    flex-shrink: 0;
+}
+.picradio{
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 5%;
+    /* border: 2px solid yellow; */
+}
+.radiocard >* {
+    padding-top: 7px;
+}
+.radiocard p{
+    font-size: small;
+    color: lightgray;
+}
+.radiocard:hover{
+    background-color: rgb(48, 48, 48);
+    cursor: pointer;
+}
+/* right main footer */
+hr{
+    color: darkgray;
+    margin: 16px 16px;
+    border: 1px solid rgb(103, 103, 103)
+}
+.containerofmainfooter{
+    margin: 2.5rem;
+    display: grid;
+    gap: 15px;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    justify-content: center;
+    align-items: first baseline;
+
+}
+ul li{
+    list-style: none;
+    color: darkgray;
+    margin-bottom: 5px;
+}
+.firstli{
+    font-weight: 600;
+    color: white;
+    cursor: default;
+}
+ul li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+.boxsocial{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+    flex-shrink: 1;
+}
+.boxsocial ul > li > img{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+.boxsocial ul > li > img:hover{
+    transform: scale(1.2);
+}
+.boxsocial ul > li{
+    list-style: none;
+    background-color: rgb(46, 46, 46);
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 10px;
+    text-align: center;
+}
+.copyright p{
+    margin-top: 1.5rem;
+    color: darkgray;
+    font-size: small;
+    padding: 1rem;
+
+}
+
+footer{
+    width: 98%; 
+    margin: auto;
+    height: 13vh;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: #e81eb2;
+    background: linear-gradient(90deg, rgba(232, 30, 178, 1) 0%, rgba(87, 164, 199, 1) 58%, rgba(108, 28, 237, 1) 100%);
+}
+.rightfoot span{
+    border-radius: 24px;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    font-size: large;
+    font-weight: 600;
+}
+.rightfoot > span:hover{
+    cursor: pointer;
+    transform: scale(1.15)
+}

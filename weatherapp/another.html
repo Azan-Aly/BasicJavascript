@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #00ffd0, #ACB6E5);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.weather-card {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 420px;
+    text-align: center;
+    max-width: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.search-box {
+    display: flex;
+    margin-bottom: 1.5rem;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px 0 0 10px;
+    outline: none;
+    font-size: 1rem;
+}
+
+.search-box button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #4facfe;
+    color: white;
+    font-weight: bold;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-box button:hover {
+    background-color: #00c6ff;
+}
+
+.search-box button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.location {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.date {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 1.2rem;
+}
+
+.temperature {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.weather {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.icon {
+    width: 80px;
+    height: 80px;
+    margin: 1rem auto;
+}
+
+.errormsg {
+    display: none;
+    color: #ff4757;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.loading {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 1rem;
+}
+
+@media (max-width: 400px) {
+    .weather-card {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .search-box input,
+    .search-box button {
+        font-size: 0.9rem;
+    }
+
+    .temperature {
+        font-size: 3rem;
+    }
+
+    .icon {
+        width: 60px;
+        height: 60px;
+    }
+}
+    </style>
+</head>
+
+<body>
+    <div class="weather-card">
+        <div class="search-box">
+            <input type="text" placeholder="Enter city name" id="inputtext" />
+            <button id="submitweather" type="button">Search</button>
+        </div>
+        <div class="location"></div>
+        <div class="date"></div>
+        <img class="icon" src="https://openweathermap.org/img/wn/01d@2x.png" alt="weather icon">
+        <div class="temperature"></div>
+        <div class="weather"></div>
+        <div class="loading" style="display: none;">Loading...</div>
+        <p class="errormsg">City not found. Please try again.</p>
+    </div>
+
+    <script>
+        const inputtext = document.getElementById('inputtext');
+        const getWeatherbtn = document.getElementById('submitweather');
+        const locationEl = document.querySelector('.location');
+        const dateEl = document.querySelector('.date');
+        const iconEl = document.querySelector('.icon');
+        const temperatureEl = document.querySelector('.temperature');
+        const weatherEl = document.querySelector('.weather');
+        const errorMsg = document.querySelector('.errormsg');
+        const loadingEl = document.querySelector('.loading');
+
+        const API_Key = 'e37ec1984e2206c51c48167d52a7f1c8';
+
+        // Set current date
+        function updateDate() {
+            const now = new Date();
+            const options = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            };
+            dateEl.textContent = now.toLocaleDateString('en-US', options);
+        }
+
+        // Call updateDate on load
+        updateDate();
+
+        // Add Enter key support
+        inputtext.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                getWeatherbtn.click();
+            }
+        });
+
+        getWeatherbtn.addEventListener('click', async () => {
+            const city = inputtext.value.trim();
+            if (!city) return;
+            
+            hideError();
+            showLoading();
+            
+            try {
+                const weatherData = await fetchWeatherData(city);
+                displayWeatherData(weatherData);
+            } catch (error) {
+                showError();
+            } finally {
+                hideLoading();
+            }
+        });
+
+        async function fetchWeatherData(city) {
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${API_Key}`;
+            const response = await fetch(url);
+            
+            if (!response.ok) {
+                throw new Error('City not found');
+            }
+            
+            const data = await response.json();
+            return data;
+        }
+
+        function displayWeatherData(data) {
+            const { name, sys, main, weather } = data;
+            
+            locationEl.textContent = `${name}, ${sys.country}`;
+            temperatureEl.textContent = `${Math.round(main.temp)}°C`;
+            weatherEl.textContent = weather[0].description.charAt(0).toUpperCase() + weather[0].description.slice(1);
+            iconEl.src = `https://openweathermap.org/img/wn/${weather[0].icon}@2x.png`;
+            iconEl.alt = weather[0].description;
+            
+            // Clear input
+            inputtext.value = '';
+        }
+
+        function showError() {
+            errorMsg.style.display = 'block';
+        }
+
+        function hideError() {
+            errorMsg.style.display = 'none';
+        }
+
+        function showLoading() {
+            loadingEl.style.display = 'block';
+            getWeatherbtn.disabled = true;
+        }
+
+        function hideLoading() {
+            loadingEl.style.display = 'none';
+            getWeatherbtn.disabled = false;
+        }
+    </script>
+</body>
+
+</html>

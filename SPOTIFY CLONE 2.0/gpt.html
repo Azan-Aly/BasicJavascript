@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotify Navbar</title>
+  <style>
+    /* ---------- Base ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #121212;
+      color: white;
+    }
+
+    nav {
+      height: 70px;
+      width: 100%;
+      background: #000;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1.5rem;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    /* ---------- Left (Logo + Search) ---------- */
+    .leftsearch {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex: 1;
+    }
+
+    #logo {
+      height: 2rem;
+      cursor: pointer;
+    }
+
+    #home {
+      height: 2.5rem;
+      padding: 6px;
+      border-radius: 50%;
+      background: #1ed760;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    #home:hover {
+      transform: scale(1.1);
+    }
+
+    .searches {
+      display: flex;
+      align-items: center;
+      background: #1f1f1f;
+      border-radius: 30px;
+      padding: 5px 12px;
+      gap: 10px;
+      flex: 1;
+      max-width: 420px;
+    }
+
+    .searches input {
+      flex: 1;
+      background: transparent;
+      border: none;
+      outline: none;
+      color: white;
+      font-size: 0.95rem;
+    }
+
+    .searches input::placeholder {
+      color: #b3b3b3;
+    }
+
+    #search,
+    #browse {
+      height: 1.2rem;
+      cursor: pointer;
+      opacity: 0.8;
+      transition: opacity 0.2s;
+    }
+
+    #search:hover,
+    #browse:hover {
+      opacity: 1;
+    }
+
+    /* ---------- Center Nav Options ---------- */
+    .centerofnav {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      font-weight: 600;
+      color: #b3b3b3;
+      cursor: pointer;
+    }
+
+    .centerofnav p:hover {
+      color: #fff;
+      transition: 0.2s;
+    }
+
+    /* ---------- Install Section ---------- */
+    .aftercenter {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      color: #b3b3b3;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .installnavoptions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    #install {
+      height: 1rem;
+    }
+
+    .aftercenter:hover {
+      color: #fff;
+      transition: 0.2s;
+    }
+
+    /* ---------- Right Buttons ---------- */
+    .rightbtns {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .btn2 {
+      color: #b3b3b3;
+      font-weight: 600;
+      cursor: pointer;
+      transition: color 0.2s, transform 0.2s;
+    }
+
+    .btn2:hover {
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    .btn1 {
+      padding: 10px 26px;
+      border-radius: 999px;
+      border: none;
+      font-size: 1rem;
+      font-weight: 600;
+      background: #fff;
+      color: #000;
+      cursor: pointer;
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .btn1:hover {
+      background: #e6e6e6;
+      transform: scale(1.05);
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 992px) {
+      .centerofnav,
+      .aftercenter {
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .searches {
+        display: none;
+      }
+
+      nav {
+        padding: 0 1rem;
+      }
+
+      .btn1 {
+        padding: 8px 18px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <!-- Left -->
+    <div class="leftsearch">
+      <img id="logo" src="./assets/logo.svg" alt="Spotify" />
+      <img id="home" src="./assets/home.svg" alt="home" />
+      <div class="searches">
+        <img id="search" src="./assets/search.svg" alt="search" />
+        <input type="text" placeholder="Search songs & artists" />
+        <img title="browse" id="browse" src="./assets/browse.svg" alt="browse" />
+      </div>
+    </div>
+
+    <!-- Center -->
+    <div class="centerofnav">
+      <p>Premium</p>
+      <p>Support</p>
+      <p>Download</p>
+    </div>
+
+    <!-- Install App -->
+    <div class="aftercenter">
+      <div class="installnavoptions">
+        <img id="install" src="./assets/install.svg" alt="install" />
+        <p>Install App</p>
+      </div>
+    </div>
+
+    <!-- Right -->
+    <div class="rightbtns">
+      <p class="btn2">Sign up</p>
+      <button class="btn1">Log in</button>
+    </div>
+  </nav>
+</body>
+
+</html>

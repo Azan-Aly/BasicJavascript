@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> my Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="weather-card">
+        <div class="search-box">
+            <input type="text" placeholder="Enter city name" id="inputtext" />
+            <button id="submitweather" type="button" id="submitweather">Search</button>
+        </div>
+        <div class="location">Lahore, PK</div>
+        <div class="date">Monday, 17 June 2025</div>
+        <img class="icon" src="https://openweathermap.org/img/wn/01d@2x.png" alt="weather icon">
+        <div class="temperature">32°C</div>
+        <div class="weather">Sunny</div>
+        <div class="loading" style="display: none;">Loading...</div>
+        <p class="errormsg">City not found. Please try again.</p>
+
+    </div>    
+
+        <script src="script.js"></script>
+</body>
+</html>

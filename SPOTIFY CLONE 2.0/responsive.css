@@ -1,0 +1,222 @@
+/* for mobile */
+/* @media (max-width: 400px) {
+    .leftsidebar{
+        display: none;
+    }
+    .rightmainsection{
+        width: 100vw;
+        left: 0;
+        height: 75vh;
+        top: 10vh;
+        background-color: #111111;
+
+    }
+    nav{
+        margin-top: 2vh;
+    }
+    .centerofnav{
+        display: none;
+    }
+    .aftercenter{
+        display: none;
+    }
+
+    .creatorheading{
+        gap: 1rem;
+    }
+    .radiosong{
+        gap: 10rem;
+        align-items: space-around;
+    }
+    .rightfoot{
+        font-size: small;
+        padding: 4px;
+        border-radius: 65px;
+    }
+}
+
+
+
+/* for tablet */
+
+
+/* 
+@media (max-width: 900px) {
+    .leftsidebar{
+        display: none;
+    }
+    .rightmainsection{
+        width: 100vw;
+        left: 0;
+        height: 75vh;
+        top: 10vh;
+        background-color: #111111;
+
+    }
+    nav{
+        margin-top: 2vh;
+    }
+    .centerofnav{
+        display: none;
+    }
+    .aftercenter{
+        display: none;
+    }
+    .seemore{
+        right: 55px;
+    }
+    .creatorheading{
+        gap: 28rem;
+    }
+    .radiosong{
+        gap: 29rem;
+    }
+    .rightfoot{
+        font-size: medium;
+        padding: 8px;
+        border-radius: 65px;
+    }
+} */
+
+
+
+/* responsive.css */
+
+/* ============ Small Screens (Tablets & Below) ============ */
+@media (max-width: 1024px) {
+  /* NAV */
+  .centerofnav,
+  .aftercenter {
+    display: none; /* hide extra nav links */
+  }
+
+  .leftsearch input {
+    width: 14rem;
+    font-size: 0.9rem;
+  }
+
+  .rightbtns .btn1 {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+  }
+
+  /* SIDEBAR */
+  .leftsidebar {
+    width: 30vw;
+  }
+
+  .rightmainsection {
+    left: 31vw;
+    width: 68vw;
+  }
+
+  /* CARDS */
+  .card, .creatorcard, .radiocard {
+    width: 150px;
+  }
+  .pic, .piccreator, .picradio {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+/* ============ Mobile (≤ 768px) ============ */
+@media (max-width: 768px) {
+  header {
+    height: 8vh;
+  }
+
+  nav {
+    justify-content: space-between;
+    padding: 0 10px;
+  }
+
+  /* NAV simplification */
+  .leftsearch #home {
+    display: none; /* hide home button */
+  }
+  .leftsearch input {
+    display: none; /* hide search input */
+  }
+  .searches {
+    background: none;
+    padding: 0;
+  }
+
+  .rightbtns .btn2 {
+    display: none; /* hide signup text */
+  }
+
+  /* SIDEBAR collapses */
+  .leftsidebar {
+    display: none; /* hide sidebar on mobile */
+  }
+
+  /* MAIN FULL WIDTH */
+  .rightmainsection {
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 8vh - 13vh); /* full height except header + footer */
+    margin-left: 0;
+  }
+
+  .cardcontainer,
+  .creatorscontainer,
+  .radiocontainer {
+    gap: 12px;
+  }
+
+  .card, .creatorcard, .radiocard {
+    width: 130px;
+  }
+  .pic, .piccreator, .picradio {
+    height: 130px;
+    width: 130px;
+  }
+
+  /* FOOTER */
+  #mainfooter {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 10px;
+    height: auto;
+  }
+  .rightfoot button {
+    padding: 10px 20px;
+  }
+}
+
+/* ============ Extra Small (≤ 480px) ============ */
+@media (max-width: 480px) {
+  nav {
+    gap: 5px;
+  }
+  #logo {
+    height: 1.8rem;
+    margin: 0.2rem;
+  }
+
+  .btn1 {
+    padding: 6px 14px;
+    font-size: 0.8rem;
+  }
+
+  .spotifyplaylist h2,
+  .creatorheading h2,
+  .radiosong h2 {
+    font-size: 1rem;
+  }
+
+  .card, .creatorcard, .radiocard {
+    width: 110px;
+  }
+  .pic, .piccreator, .picradio {
+    width: 110px;
+    height: 110px;
+  }
+
+  footer#mainfooter {
+    font-size: 0.8rem;
+  }
+}

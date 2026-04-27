@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body{
+            background-color: rgb(114, 114, 114);
+        }
+        nav {
+            display: flex;
+            margin-top: 3px;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+
+        #search {
+            height: 2rem;
+            cursor: pointer;
+        }
+
+        #browse {
+            height: 1.9rem;
+            padding: 3px;
+            margin: 4px;
+            cursor: pointer;
+        }
+
+        #install {
+            height: 0.9rem;
+            margin-top: 3.5px;
+        }
+
+        #home {
+            height: 2.5rem;
+            padding: 4px;
+            cursor: pointer;
+            background-color: rgb(255, 255, 255);
+            border-radius: 50%;
+        }
+
+        #logo {
+            height: 2.3rem;
+            margin: 0.2rem 1.5rem;
+            margin-right: 0;
+            cursor: pointer;
+        }
+
+        .leftsearch input {
+            height: 2rem;
+            width: 22rem;
+            color: white;
+            padding: 0.9rem;
+            border-radius: 0.9rem;
+            border: none;
+            outline: none;
+            font-size: large;
+            background-color: rgb(36, 36, 36);
+            ;
+        }
+
+        .searches {
+            display: flex;
+            align-items: center;
+            background-color: rgb(36, 36, 36);
+            border-radius: 1.5rem;
+            font-size: large;
+            padding: 5px;
+            font-size: large;
+            padding-left: 13px;
+        }
+
+        .line {
+            color: darkgray;
+            font-size: 1.5rem;
+
+        }
+
+        .leftsearch {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+
+        }
+        .rightnavside{
+            display: flex;
+            justify-content:space-between;
+            align-self: center;
+            gap: 5rem;
+        }
+
+        .centerofnav {
+            font-weight: 650;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.8rem;
+            margin-left: 1.8rem;
+            width: 100%;
+            color: darkgray;
+            cursor: pointer;
+        }
+
+        #line {
+            color: darkgray;
+            font-size: 1.3rem;
+            font-weight: 400;
+            cursor: auto;
+        }
+
+        .installnavoptions {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.4rem;
+            text-align: center;
+
+        }
+
+        .aftercenter {
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            gap: 1rem;
+            font-weight: 650;
+            color: darkgray;
+        }
+
+        .rightbtns {
+            font-weight: 650;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            align-items: center;
+            width: 100%;
+
+        }
+
+        .btn1 {
+            cursor: pointer;
+            padding: 12px 26px;
+            border-radius: 29px;
+            border: none;
+            font-size: 1rem;
+            background-color: white;
+            color: #000000;
+            font-weight: 600;
+        }
+
+        .btn2 {
+            cursor: pointer;
+            text-align: center;
+            color: #b2b2b2;
+        }
+
+        .btn1:hover {
+            transform: scale(1.1);
+            transition: all 0.2s ease-in-out;
+        }
+
+        .btn2:hover {
+            transform: scale(1.15);
+        }
+
+        .btn2:hover,
+        .myp:hover,
+        .centerofnav p:hover {
+            color: white;
+            transition: all 0.2s ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="leftsearch">
+            <img class="invert" id="logo" src="./assets/logo.svg" alt="spotify" />
+            <img class="invert" id="home" src="./assets/home.svg" alt="home" />
+            <div class="searches">
+                <img class="invert" id="search" src="./assets/search.svg" alt="search" />
+                <input type="text" placeholder="Search songs & artists" />
+                <p class="line">|</p>
+                <img class="invert" title="browse" id="browse" src="./assets/browse.svg" alt="" />
+            </div>
+        </div>
+
+        <div class="rightnavside">
+
+            <div class="centerofnav">
+                <p>Premium</p>
+                <p>Support</p>
+                <p>Download</p>
+            </div>
+            <div class="aftercenter">
+                <p id="line">|</p>
+                <div class="installnavoptions">
+                <img class="invert" id="install" src="./assets/install.svg" alt="install" />
+                <p class="myp">Install app</p>
+            </div>
+            <div class="rightbtns">
+                <p class="btn2">Sign up</p>
+                <button class="btn1">Log in</button>
+            </div>
+        
+        </div>
+    
+    </nav>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+/* Reset and full height layout */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Prevent page scroll */
+}
+
+/* App layout */
+.app {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+}
+
+/* Sidebar - Fixed */
+.left {
+  width: 250px;
+  background-color: #121212;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Right section - Fixed layout */
+.right {
+  flex: 1;
+  height: 100vh;
+  overflow: hidden; /* Keep right section fixed */
+  background-color: #1e1e1e;
+}
+
+/* Scrollable content inside right */
+.right-content {
+  height: 100%;
+  overflow-y: auto; /* Only this part scrolls */
+  padding: 20px;
+  box-sizing: border-box;
+}

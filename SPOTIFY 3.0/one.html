@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="utility.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            overflow: hidden;
+        }
+
+        body {
+            color: white;
+            background-color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        nav {
+            height: 10vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: aqua;
+            margin: 6px 22px;
+        }
+
+        #logo {
+            height: 2.5rem;
+        }
+
+        #home {
+            height: 2.7rem;
+            padding: 4px;
+            border-radius: 50%;
+            background-color: rgb(225, 225, 225);
+        }
+
+        .nav-logos {
+            gap: 20px;
+            width: 10%;
+        }
+
+        .searches {
+            display: flex;
+            align-items: center;
+            background-color: rgb(36, 36, 36);
+            border-radius: 1.5rem;
+            font-size: 2.5rem;
+            padding: 5px;
+            justify-content: space-around;
+            width: 35%;
+        }
+
+        .searches input {
+            padding: 8px;
+            font-size: 1.4rem;
+            outline: none;
+            border-block-style: none;
+            border-right-style: none;
+            color: white;
+            background-color: rgb(36, 36, 36);
+        }
+
+        #search {
+            height: 2rem;
+        }
+
+        #browse {
+            height: 1.8rem;
+        }
+
+        #line,
+        .line {
+            font-size: 1.5rem;
+            font-weight: 200;
+        }
+
+        #install {
+            height: 1.1rem;
+        }
+
+        .centerofnav {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 25%;
+            gap: 1.2rem;
+        }
+
+        .centerofnav>* {
+            text-decoration: none;
+            color: darkgray;
+            font-weight: 650;
+            font-size: large;
+        }
+
+        .afternav {
+            width: 10%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: darkgray;
+            font-weight: 650;
+            font-size: 1.1rem;
+        }
+
+        .rightbtns {
+            width: 16%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .btn2 {
+            padding: 10px 24px;
+            background-color: #fff;
+            color: black;
+            font-size: large;
+            font-weight: 650;
+            border-radius: 24px;
+            gap: .7rem;
+        }
+
+        .btn1 {
+            font-weight: 650;
+            font-size: large;
+            color: darkgray;
+        }
+
+
+        .myp:hover,
+        .centerofnav>a>p:hover {
+            cursor: pointer;
+            color: white;
+        }
+
+        .btn1:hover {
+            cursor: pointer;
+            color: white;
+            transform: scale(1.2);
+        }
+
+        .btn2:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+
+        /* navbar ends here */
+
+        .container {
+            height: 80vh;
+            background-color: chocolate;
+            display: flex;
+        }
+
+        aside {
+            height: 100%;
+            width: 30%;
+            background-color: #fff;
+        }
+
+        main {
+            background-color: black;
+            width: 70%;
+        }
+
+        footer {
+            height: 10vh;
+            background-color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <nav>
+            <!-- 1st logo -->
+            <div class="nav-logos fullflex">
+                <img class="invert" id="logo" src="./assets/logo.svg" alt="spotify" />
+                <img class="invert" id="home" src="./assets/home.svg" alt="home" />
+            </div>
+            <!-- 2nd searches -->
+            <div class="searches ">
+                <img class="invert" id="search" src="./assets/search.svg" alt="search" />
+                <input type="text" placeholder="Search songs & artists" />
+                <span class="line">|</span>
+                <img class="invert" title="browse" id="browse" src="./assets/browse.svg" alt="" />
+            </div>
+            <div class="centerofnav">
+                <a href="#">
+                    <p>Premium</p>
+                </a>
+                <a href="#">
+                    <p>Support</p>
+                </a>
+                <a href="#">
+                    <p>Download</p>
+                </a>
+            </div>
+            <p id="line">|</p>
+            <div class="afternav ">
+                <!-- <div class="installnavoptions"> -->
+                <img class="invert" id="install" src="./assets/install.svg" alt="install" />
+                <span class="myp">Install app</span>
+                <!-- </div> -->
+            </div>
+            <div class="rightbtns">
+                <p class="btn1">Sign up</p>
+                <p class="btn2">Log in</p>
+            </div>
+
+        </nav>
+        <!-- navbar for mobile -->
+    </nav>
+    <div class="container">
+        <aside>aside</aside>
+        <main>main</main>
+    </div>
+    <footer>footer</footer>
+</body>
+
+</html>

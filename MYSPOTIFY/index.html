@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Spotify Clone</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utility.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- main body -->
+    <div class="container flex">
+        <!-- Left Sidebar -->
+        <div class="leftsidebar">
+            <div class="left">
+                <!-- home section -->
+                <div class="home bggray rounded mp1">
+                    <div class="logo">
+                        <img class="invert" src="logo.svg" alt="Spotify Logo" /><span>Spotify</span>
+                    </div>
+                    <ul>
+                        <li><img class="invert" src="home.svg" alt="Home" /><b>Home</b></li>
+                        <li><img class="invert" src="search.svg" alt="Search" /><b>Search</b></li>
+                    </ul>
+                </div>
+                <!-- library section -->
+                <div class="library bggray rounded mp1">
+                    <div class="heading">
+                        <h3>Your library</h3>
+                        <i class="fa-regular fa-plus"></i>
+                    </div>
+
+                    <div class="centerofsidebar">
+
+                        <div class="centerofsidebarbox1 fullflex">
+                            <h3>Create your first Playlist</h3>
+                            <p>It's easy, we'll help you</p>
+                            <h4>Create Playlist</h4>
+                        </div>
+                        <div class="centerofsidebarbox2 fullflex">
+                            <h3>Let's find some podcasts to follow</h3>
+                            <p>We'll keep you updated on new episodes</p>
+                            <h4>Browse podcasts</h4>
+                        </div>
+
+                    </div>
+
+                    <div class="libfooter">
+                        <div class="footer">
+                            <div class="legal-links">
+                                <a href="https://www.spotify.com/pk-en/legal/">Legal</a>
+                                <a href="https://www.spotify.com/pk-en/safetyandprivacy/">Safety & Privacy Center</a>
+                                <a href="https://www.spotify.com/pk-en/legal/privacy-policy/">Privacy Policy</a>
+                                <a href="https://www.spotify.com/pk-en/legal/cookies-policy/">Cookies</a>
+                                <a href="https://www.spotify.com/pk-en/legal/privacy-policy/#s3">About Ads</a>
+                                <a href="https://www.spotify.com/pk-en/accessibility/">Accessibility</a>
+                            </div>
+                            <div class="language-selection">
+                                <button type="button" aria-label="Change language">
+                                    <span class="icon">
+                                        <svg viewBox="0 0 16 16" aria-hidden="true">
+                                            <path
+                                                d="M8.152 16H8a8 8 0 1 1 .152 0zm-.41-14.202c-.226.273-.463.713-.677 1.323-.369 1.055-.626 2.496-.687 4.129h3.547c-.06-1.633-.318-3.074-.687-4.129-.213-.61-.45-1.05-.676-1.323-.194-.235-.326-.285-.385-.296h-.044c-.055.007-.19.052-.391.296zM4.877 7.25c.062-1.771.34-3.386.773-4.624.099-.284.208-.554.329-.806a6.507 6.507 0 0 0-4.436 5.43h3.334zm-3.334 1.5a6.507 6.507 0 0 0 4.436 5.43 7.974 7.974 0 0 1-.33-.806c-.433-1.238-.71-2.853-.772-4.624H1.543zm4.835 0c.061 1.633.318 3.074.687 4.129.214.61.451 1.05.677 1.323.202.244.336.29.391.297l.044-.001c.06-.01.19-.061.385-.296.226-.273.463-.713.676-1.323.37-1.055.626-2.496.687-4.129H6.378zm5.048 0c-.061 1.771-.339 3.386-.772 4.624-.082.235-.171.46-.268.674a6.506 6.506 0 0 0 4.071-5.298h-3.03zm3.031-1.5a6.507 6.507 0 0 0-4.071-5.298c.097.214.186.44.268.674.433 1.238.711 2.853.772 4.624h3.031z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    English
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- lib end -->
+            </div>
+        </div>
+        <!-- Right Section -->
+        <div class="rightcontainer">
+            <div class="right ">
+                <header>
+                    <nav>
+                        <div class="leftsearch">
+                            <img class="invert" src="search.svg" alt="search" />
+                            <input type="text" placeholder="Search songs & artists" />
+                        </div>
+                        <div class="centerofnav">
+                            <p>Premium</p>
+                            <p>Support</p>
+                            <p>Download</p>
+
+                        </div>
+                        <div class="aftercenter">
+                            <p id="line">|</p>
+                            <p class="myp">Install app</p>
+                        </div>
+                        <div class="rightbtns">
+                            <p class="btn2">Sign up</p>
+                            <button class="btn1">Log in</button>
+                        </div>
+                    </nav>
+                    <hr>
+                </header>
+                <!-- main -->
+                <div class="spotifyplaylist">
+                    <h1>Spotify Playlist</h1>
+                    <div class="cardcontainer">
+                        <div class="card">
+                            <img class="pic" src="./spotifyimagecard.jpeg" alt="playlist pic">
+                            <img id="play" class="playbtn" src="./play.svg" alt="">
+                            <h3>Jhol</h3>
+                            <p>Maanu, Annural Khalid</p>
+                        </div>
+                        <div class="card">
+                            <img class="pic" src="./spotifycard2.jpeg" alt="playlist pic">
+                            <img id="play" class="playbtn" src="./play.svg" alt="">
+                            <h3>Making Memories</h3>
+                            <p>Karan Aujla, Ikky</p>
+                        </div>
+                        <div class="card">
+                            <img class="pic" src="./spotifycard3.jpeg" alt="playlist pic">
+                            <img id="play" class="playbtn" src="./play.svg" alt="">
+                            <h3>4 Saal</h3>
+                            <p>Bayaan</p>
+                        </div>
+                        <div class="card">
+                            <img class="pic" src="./spotifycard5.jpeg" alt="playlist pic">
+                            <img id="play" class="playbtn" src="./play.svg" alt="">
+                            <h3>My Terrible Mind</h3>
+                            <p>Talha Anjum, Umair</p>
+                        </div>
+                        <div class="card">
+                            <img class="pic" src="./spotifycard4.jpeg" alt="playlist pic">
+                            <img id="play" class="playbtn" src="./play.svg" alt="">
+                            <h3>Glory</h3>
+                            <p>Yo Yo Honey Singh</p>
+                        </div>
+                        <div class="card">
+                            <img class="pic" src="./spotifycard6.jpeg" alt="playlist pic">
+                            <img id="play" class="playbtn" src="./play.svg" alt="">
+                            <h3>Shikwa (Side A)</h3>
+                            <p>Talhah Yunus</p>
+                        </div>
+                        <div class="card">
+                            <img class="pic" src="./spotifycard7.jpeg" alt="playlist pic">
+                            <img id="play" class="playbtn" src="./play.svg" alt="">
+                            <h3>Lemonade</h3>
+                            <p>Diljit Dosanjh</p>
+                        </div>
+                        <div class="card">
+                            <img class="pic" src="./spotifycard8.jpeg" alt="playlist pic">
+                            <img id="play" class="playbtn" src="./play.svg" alt="">
+                            <h3>Snapchat Story</h3>
+                            <p>Bilal Saeed, Romee khan</p>
+                        </div>
+                        <div class="card">
+                            <img class="pic" src="./spotifycard9.jpeg" alt="playlist pic">
+                            <img id="play" class="playbtn" src="./play.svg" alt="">
+                            <h3>Habibi</h3>
+                            <p>Asim Azhar</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

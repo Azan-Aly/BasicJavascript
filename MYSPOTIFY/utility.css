@@ -1,0 +1,66 @@
+.fullflex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+.flex{
+    display: flex;
+}
+.justifycenter{
+    justify-content: center;
+}
+.aligncenter{
+    align-items: center;
+}
+.border{
+    border: 2px solid blue
+}
+.bgblack{
+    background-color: black;
+    color: white;
+}
+.invert{
+    filter:invert(1);
+}
+.bggray{
+    background-color: #1f1f1f;
+    color: white;
+}
+.rounded{
+    border-radius: 10px;
+}
+.mp1{
+    margin: 8px;
+    padding: 20px;
+}
+.m1{
+    margin: 8px;
+}
+
+
+
+/* Dark Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e1e;  /* Dark track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #555;     /* Medium gray thumb */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #888;     /* Lighter gray on hover */
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: auto;
+  scrollbar-color: #555 #1e1e1e;
+}

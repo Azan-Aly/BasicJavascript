@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body><div class="main">
+    <h1>Interest Calculator</h1>
+    <form>
+        <div><label for="Principal">Principal Amount</label>
+        <input type="number" id="Principal" placeholder="Enter Principal Amount" required></div>
+
+        <div><label for="Interest">Interest Rate</label>
+        <input type="number" id="Interest" placeholder="Enter Interest Rate" required></div>
+        
+        <div><label for="years">Years: </label>
+        <input type="number" id="years" placeholder="Enter Years" required></div>
+
+        <div><button type="button" onclick="Calculate()" id="btn">Submit</button></div>
+
+        <div class="total"><p id="total" >Total : $  <span id="totalval"></span></p></div>
+    </form></div>
+</body>
+    <script src="script.js"></script>
+</html>

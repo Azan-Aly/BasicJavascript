@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify v3.0</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="utility.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMt23cez/3paNdF+e4x5l5d1j7b2c5a8b2c5a8b" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div class="bodyStructure">
+        <!-- nav starts here -->
+        <nav>
+            <!-- 1st logo -->
+            <div class="nav-logos fullflex">
+                <img class="invert" id="logo" src="./assets/logo.svg" alt="spotify" />
+                <img class="invert" id="home" src="./assets/home.svg" alt="home" />
+            </div>
+            <!-- 2nd searches -->
+            <div class="searches ">
+                <img class="invert" id="search" src="./assets/search.svg" alt="search" />
+                <input type="text" placeholder="Search songs & artists" />
+                <span class="line">|</span>
+                <img class="invert" title="browse" id="browse" src="./assets/browse.svg" alt="" />
+            </div>
+            <div class="centerofnav">
+                <a href="#">
+                    <p>Premium</p>
+                </a>
+                <a href="#">
+                    <p>Support</p>
+                </a>
+                <a href="#">
+                    <p>Download</p>
+                </a>
+            </div>
+            <p id="line">|</p>
+            <div class="afternav ">
+                <!-- <div class="installnavoptions"> -->
+                <img class="invert" id="install" src="./assets/install.svg" alt="install" />
+                <span class="myp">Install app</span>
+                <!-- </div> -->
+            </div>
+            <div class="rightbtns">
+                <p class="btn1">Sign up</p>
+                <p class="btn2">Log in</p>
+            </div>
+
+        </nav>
+        <!-- navbar for mobile -->
+        <div class="nav-mob"></div>
+        <!-- container aside and main -->
+        <div class="container">
+            <aside>
+                <div class="library rounded">
+                    <div class="heading">
+                        <h3>Your library</h3>
+                        <i class="fa-regular fa-plus">+</i>
+                    </div>
+
+                    <div class="centerofsidebar">
+                        <div class="centerofsidebarbox1 fullflex">
+                            <h3>Create your first Playlist</h3>
+                            <p>It's easy, we'll help you</p>
+                            <h4>Create Playlist</h4>
+                        </div>
+                        <div class="centerofsidebarbox2 fullflex">
+                            <h3>Let's find some podcasts to follow</h3>
+                            <p>We'll keep you updated on new episodes</p>
+                            <h4>Browse podcasts</h4>
+                        </div>
+                    </div>
+
+                    <div class="libfooter">
+                        <div class="footer">
+                            <div class="legal-links">
+                                <a href="https://www.spotify.com/pk-en/legal/">Legal</a>
+                                <a href="https://www.spotify.com/pk-en/safetyandprivacy/">Safety & Privacy Center</a>
+                                <a href="https://www.spotify.com/pk-en/legal/privacy-policy/">Privacy Policy</a>
+                                <a href="https://www.spotify.com/pk-en/legal/cookies-policy/">Cookies</a>
+                                <a href="https://www.spotify.com/pk-en/legal/privacy-policy/#s3">About Ads</a>
+                                <a href="https://www.spotify.com/pk-en/accessibility/">Accessibility</a>
+                            </div>
+                            <div class="language-selection">
+                                <button type="button" aria-label="Change language">
+                                    <span class="icon">
+                                        <svg viewBox="0 0 16 16" aria-hidden="true">
+                                            <path
+                                                d="M8.152 16H8a8 8 0 1 1 .152 0zm-.41-14.202c-.226.273-.463.713-.677 1.323-.369 1.055-.626 2.496-.687 4.129h3.547c-.06-1.633-.318-3.074-.687-4.129-.213-.61-.45-1.05-.676-1.323-.194-.235-.326-.285-.385-.296h-.044c-.055.007-.19.052-.391.296zM4.877 7.25c.062-1.771.34-3.386.773-4.624.099-.284.208-.554.329-.806a6.507 6.507 0 0 0-4.436 5.43h3.334zm-3.334 1.5a6.507 6.507 0 0 0 4.436 5.43 7.974 7.974 0 0 1-.33-.806c-.433-1.238-.71-2.853-.772-4.624H1.543zm4.835 0c.061 1.633.318 3.074.687 4.129.214.61.451 1.05.677 1.323.202.244.336.29.391.297l.044-.001c.06-.01.19-.061.385-.296.226-.273.463-.713.676-1.323.37-1.055.626-2.496.687-4.129H6.378zm5.048 0c-.061 1.771-.339 3.386-.772 4.624-.082.235-.171.46-.268.674a6.506 6.506 0 0 0 4.071-5.298h-3.03zm3.031-1.5a6.507 6.507 0 0 0-4.071-5.298c.097.214.186.44.268.674.433 1.238.711 2.853.772 4.624h3.031z">
+                                            </path>
+                                        </svg>
+                                    </span>
+                                    English
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <main>
+                <!-- songs -->
+                <div class="spotifyplaylist">
+                    <div class="trendingsong">
+                        <h2>Trending Songs</h2>
+                        <p class="seemore">Show all</p>
+                    </div>
+                    <div class="cardcontainer">
+                        <!-- cards will be added from javascript array by foreach loop and dom -->
+                    </div>
+                </div>
+
+                <!-- creator -->
+                <!-- <div class="creatorsection">
+                    <div class="creatorheading">
+                        <h2>Popular Artists</h2>
+                        <p class="seemoretwo">Show all</p>
+                    </div>
+                    <div class="creatorscontainer">
+                    </div>
+                </div> -->
+
+                <!-- radiosection -->
+                <!-- <div class="Radiostation">
+                    <div class="radiosong">
+                        <h2>Popular Radio</h2>
+                        <p class="seemorethree">Show all</p>
+                    </div>
+                    <div class="radiocontainer">
+                        cards will be added from javascript array by foreach loop and dom -->
+                    <!-- </div>
+                </div> -->
+
+                <!-- one right footer -->
+                <!-- <div class="rightmainfooter">
+                    <div class="hr">
+                        <hr />
+                    </div>
+                    <div class="containerofmainfooter">
+                        <div class="box">
+                            <ul>
+                                <li class="firstli">Company</li>
+                                <li>About</li>
+                                <li>Jobs</li>
+                                <li>For the Record</li>
+                            </ul>
+                        </div>
+                        <div class="box">
+                            <ul>
+                                <li class="firstli">Communities</li>
+                                <li>For Artists</li>
+                                <li>Developers</li>
+                                <li>Advertising</li>
+                                <li>Inverstors</li>
+                                <li>Vendors</li>
+                            </ul>
+                        </div>
+                        <div class="box">
+                            <ul>
+                                <li class="firstli">Useful links</li>
+                                <li>Support</li>
+                                <li>Free Mobile App</li>
+                            </ul>
+                        </div>
+                        <div class="box">
+                            <ul>
+                                <li class="firstli">Spotify Plans</li>
+                                <li>Premium</li>
+                                <li>Individual</li>
+                                <li>Premium Duo</li>
+                                <li>Premium Family</li>
+                                <li>Premium Student</li>
+                                <li>Spotify Free</li>
+                            </ul>
+                        </div>
+                        <div class="box boxsocial">
+                            <ul>
+                                <li><img class="invert" src="./assets/insta.svg" alt="Insta"></li>
+                                <li><img class="invert" src="./assets/twitter.svg" alt="Twitter"></li>
+                                <li><img class="invert" src="./assets/facebook.svg" alt="facebook"></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="copyright">
+                    <div class="hr">
+                        <hr />
+                    </div>
+                    <p>© 2025 Spotify AB</p>
+                </div>
+
+        </div> -->
+
+        </main>
+    </div>
+
+    <!-- footer -->
+    <footer id="mainfooter">
+        <div class="leftfoot">
+            <h3>Preview of Spotify</h3>
+            <p>Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.</p>
+        </div>
+        <div class="rightfoot">
+            <span>Sign up for free</span>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    </div>
+</body>
+
+</html>
